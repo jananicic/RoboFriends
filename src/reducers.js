@@ -7,7 +7,7 @@ import {
 
 const initStateSearch = {
     searchField: ''
-}
+};
 
 export const searchRobots = (state = initStateSearch, action = {}) => {
     switch(action.type) {
@@ -16,16 +16,15 @@ export const searchRobots = (state = initStateSearch, action = {}) => {
         default:
             return state;
     }
-}
+};
 
 const initStateRobots = {
     isPending: false,
     robots: [],
     error: ''
-}
+};
 
 export const requestRobots = (state = initStateRobots, action = {}) => {
-    console.log('payload ' + action.payload);
     switch(action.type){
         case REQUEST_ROBOTS_PENDING:
             return Object.assign({}, state, {isPending: true});
