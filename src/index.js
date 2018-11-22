@@ -14,6 +14,8 @@ const rootReducer = combineReducers({ searchRobots, requestRobots })
 const logger = createLogger();
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 
+// GH-PAGES BRANCH
+
 ReactDOM.render(
     <Provider store={store}>
         <App/>
